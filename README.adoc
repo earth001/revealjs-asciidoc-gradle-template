@@ -9,7 +9,7 @@ Template to create Reveal.js presentations with Asciidoc and Gradle
 $ ./gradlew build
 ----
 
-You can find the final presentation under `build/presentation`
+You can find the final presentation under `docs/`
 
 === Continuous Build
 
