@@ -8,5 +8,5 @@ image::gradle-elephant.svg[]
 Gradle is awesome!
 
 [#speaker]
-Marvin Strangfeld +
-Strangfeld.io
+sasdas +
+Strangfeld.io?

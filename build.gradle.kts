@@ -3,7 +3,7 @@ import org.asciidoctor.gradle.jvm.slides.AsciidoctorJRevealJSTask
 import org.asciidoctor.gradle.jvm.slides.RevealJSOptions
 
 plugins {
-    id("org.asciidoctor.jvm.revealjs") version "3.0.0-alpha.3"
+    id("org.asciidoctor.jvm.revealjs") version "3.1.0"
     id("com.github.salomonbrys.gradle.sass") version "1.2.0"
 }
 
@@ -25,7 +25,7 @@ asciidoctorj {
 
 val asciidocTask = tasks.named<AsciidoctorJRevealJSTask>("asciidoctorRevealJs") {
     dependsOn(sassTask)
-    setOutputDir(buildDir.resolve("presentation"))
+    setOutputDir(buildDir.resolve("../docs"))
     revealjsOptions {
         setCustomThemeLocation(buildDir.resolve("style/ox-theme.css"))
         setTransitionSpeed(RevealJSOptions.TransitionSpeed.MAX_VALUE)
@@ -33,6 +33,7 @@ val asciidocTask = tasks.named<AsciidoctorJRevealJSTask>("asciidoctorRevealJs") 
         setFragments(true)
         setPushToHistory(true)
         setControls(false)
+        setSlideNumber(true)
     }
     clearSecondarySources()
     attributes(mutableMapOf(
